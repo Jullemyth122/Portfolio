@@ -1,0 +1,235 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: rgb(48, 230, 175);
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(68, 68, 68); 
+    border: 2px solid rgb(48, 230, 175) ;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(68, 68, 68); 
+  }
+  
+
+.container {
+    width: auto;
+    height: auto;
+    display: block;
+    background: linear-gradient(60deg,black,rgb(26, 26, 26),rgb(36, 36, 36));
+}
+
+.subcontainer {
+    padding: 20px;
+    width: auto;
+    height: auto;
+
+}
+
+.section {
+    width: auto;
+    height: 100vh;
+    margin: 50px;
+    padding: 100px;
+    position: relative;
+}
+
+.padding-section {
+    width: auto;
+    height: 100%;
+    padding: 20px;
+    background-image: linear-gradient(to left, lightgray,gainsboro,black);
+    background-size: 1000% 1000%;
+}
+
+.scrollbar-customize {
+    display:grid;
+    position: fixed;
+    top: 30%;
+    left: 94%;
+}
+
+.scrollbar-customize b::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 3px;
+    height: 100px;
+    left: 45%;
+    background: rgb(48, 230, 175);
+}
+
+.scrollbar-customize a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: gray;
+    font-family: 'Courier New', Courier, monospace;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: linear-gradient(to left, lightgray,gainsboro,black);
+    transition: all 2s ease-in-out;
+    background-size: 400% 400%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.scrollbar-customize a:hover {
+    background-position: 50% 100%;
+}
+
+.scrollbar-customize a:hover::before {
+    border: 3px solid black;
+
+}
+
+.scrollbar-customize a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 3px solid rgb(48, 230, 175);
+}
+.scrollbar-customize a::after {
+    content: "";
+    position: absolute;
+}
+
+.container .User {
+    
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.308);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.container .User h2 {
+    font-size: 18px;
+
+}
+
+.container .User form {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    background: linear-gradient(to left, lightgray,gainsboro,black);
+    background-size: 300%;
+}
+
+.container .User input { 
+    outline: none;
+    border: 2px solid rgb(48, 230, 175);
+    background: none;
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color:  rgb(48, 230, 175);
+}
+
+@media (max-width:750px) {
+
+    .padding-section {
+        padding: 0px;
+    }
+
+    .subcontainer {
+        padding: 0px;
+        width: auto;
+        height: auto;
+    
+    }
+    .scrollbar-customize {
+        display:grid;
+        position: fixed;
+        top: 30%;
+        left: 82%;
+    }
+    .section {
+        width: auto;
+        height: 110vh;
+        margin: 5px;
+        padding: 5px;
+        position: relative;
+    }
+
+    .section::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 0%;
+        background: green;
+    }
+    .section::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 0%;
+        background: green;
+    }
+
+    
+
+}
+
+@media (max-width:500px) {
+
+    .scrollbar-customize {
+        display:grid;
+        position: fixed;
+        top: 30%;
+        left: 82%;
+    }
+    .section {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .scrollbar-customize b::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 3px;
+        height: 100px;
+        left: 45%;
+        background: rgb(48, 230, 175);
+    }
+    
+    .scrollbar-customize a {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: gray;
+        font-family: 'Courier New', Courier, monospace;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: linear-gradient(to left, lightgray,gainsboro,black);
+        transition: all 2s ease-in-out;
+        background-size: 400% 400%;    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+}
+

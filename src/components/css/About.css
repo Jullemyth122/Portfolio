@@ -1,0 +1,515 @@
+#scroll-2 {
+    display: block;
+    align-items: center;
+    justify-content:left;
+}
+
+#scroll-2 .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+#scroll-2 .top-left {
+    margin: 0 auto;
+}
+
+#scroll-2 .top .about-animation {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+#scroll-2 .top .number-about,#scroll-2 .top .animation {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin: 1em;
+}
+
+#scroll-2 .top .number-about .number h3 {
+    margin-left: 3em;
+}
+
+
+#scroll-2 .top .number-about .number {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+#scroll-2 .top .number-about .number span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+    border-image-slice: 1;
+    animation: box 2s ease-in-out infinite alternate;
+    left: 0;
+}
+
+@keyframes box {
+    50% {
+        width: 100px;
+        height: 100px;
+        left: 20px;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        left: 10px;
+    }
+}
+
+#scroll-2 .top .number-about .number::before {
+    content: "";
+    position: absolute;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+    border-image-slice: 1;
+    width: 100px;
+    height: 100px;
+    left: 20px;
+    animation: box2 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes box2 {
+    50% {
+        width: 150px;
+        height: 150px;
+        left: 10px;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        left: 0px;
+    }
+}
+
+#scroll-2 .top .number-about .number::after {
+    content: "";
+    position: absolute;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+    border-image-slice: 1;
+    width: 150px;
+    height: 150px;
+    left: 10px;
+    animation: box3 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes box3 {
+    50% {
+        width: 200px;
+        height: 200px;
+        left: 0;
+        
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        left: 20px;
+    }
+}
+
+#scroll-2 .top .number-about .about {
+    margin: 3em;
+    position: relative;
+    width: 100px;
+    font-family: 'News Cycle', sans-serif;
+    letter-spacing: 5px;
+}
+#scroll-2 .top .number-about .about span::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+}
+#scroll-2 .top .number-about .about span::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 0px;
+    bottom: -10px;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+}
+
+#scroll-2 .top .animation {
+    position: relative;
+    width: 100px;
+}
+
+#scroll-2 .top .animation span {
+
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+
+}
+
+#scroll-2 .top .animation span::after {
+
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-image: linear-gradient(to left,rgb(15, 59, 46),rgb(33, 248, 212));
+
+}
+
+
+#scroll-2 .top .animation span:nth-child(2) {
+
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 0;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+
+}
+
+
+#scroll-2 .top .animation span:nth-child(3) {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    right: 0;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+
+}
+
+#scroll-2 .top .animation span:nth-child(4) {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    right: -10%;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+
+}
+
+#scroll-2 .top .animation span:nth-child(5) {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    right: -20%;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+
+}
+
+#scroll-2 .top .animation span:nth-child(6) {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    right: -30%;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+
+}
+
+#scroll-2 .bottom {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scroll-2 .bottom-left {
+    
+    margin: 0 auto;
+
+}
+
+#scroll-2 .title {
+    margin: 1em;
+}
+#scroll-2 .title h1 {
+    font-family: 'News Cycle', sans-serif;
+}
+
+#scroll-2 .items {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px 20px;
+}
+
+#scroll-2 .box {
+    width: 200px;
+    height: 100px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+    border-top: 12px solid ;
+    border-left: 12px solid ;
+    border-image-slice: 1;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: all 2s ease-in-out linear;
+}
+
+#scroll-2 .box:hover {
+    border-top: 5px solid;
+    border-left: 5px solid;
+}
+
+#scroll-2 .box h2 {
+    background-image: linear-gradient(to left, rgb(48, 230, 175),lightgray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+}
+
+#scroll-2 .box img {
+    width: 100px;
+    height: 75px;
+}
+#scroll-2 .box b {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 10%;
+    background-image: linear-gradient(to left, rgb(48, 230, 175),lightgray);
+}
+
+@media (max-width:1200px) {
+
+    #scroll-2 .items {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px 10px;
+    }
+
+    #scroll-2 .top .animation span {
+
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        transform: rotate(-45deg);
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+    
+    }
+    
+    #scroll-2 .top .animation span::after {
+    
+        content: "";
+        position: absolute;
+        left: -10%;
+        top: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background-image: linear-gradient(to left,rgb(15, 59, 46),rgb(33, 248, 212));
+    
+    }
+    
+    
+    #scroll-2 .top .animation span:nth-child(2) {
+    
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        left: 5%;
+        transform: rotate(-45deg);
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+    
+    }
+    
+    
+    #scroll-2 .top .animation span:nth-child(3) {
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        left: 10%;
+        transform: rotate(-45deg);
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+    
+    }
+    
+    #scroll-2 .top .animation span:nth-child(4) {
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        left: 15%;
+        transform: rotate(-45deg);
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+    
+    }
+    
+    #scroll-2 .top .animation span:nth-child(5) {
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        left: 20%;
+        transform: rotate(-45deg);
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+    
+    }
+    
+    #scroll-2 .top .animation span:nth-child(6) {
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        left: 25%;
+        transform: rotate(-45deg);
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+    
+    }
+
+    #scroll-2 .box {
+        width: 180px;
+        height: 80px;
+        border: 2px solid transparent;
+        border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+        border-top: 12px solid ;
+        border-left: 12px solid ;
+        border-image-slice: 1;
+        padding: 25px;
+        position: relative;
+        overflow: hidden;
+        transition: all 2s ease-in-out linear;
+    }
+
+}
+
+@media (max-width:700px) {
+
+    #scroll-2 .box {
+        width: 130px;
+        height: 80px;
+        border: 2px solid transparent;
+        border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+        border-top: 12px solid ;
+        border-left: 12px solid ;
+        border-image-slice: 1;
+        padding: 25px;
+        position: relative;
+        overflow: hidden;
+        transition: all 2s ease-in-out linear;
+    }
+
+    #scroll-2 .top .animation span {
+
+        display: none;
+    
+    }
+    
+    #scroll-2 .top .animation span::after {
+    
+        display: none;
+
+    }
+    
+    
+    #scroll-2 .top .animation span:nth-child(2) {
+    
+        display: none;
+
+    }
+    
+    
+    #scroll-2 .top .animation span:nth-child(3) {
+        display: none;
+
+    }
+    
+    #scroll-2 .top .animation span:nth-child(4) {
+        display: none;
+
+    }
+    
+    #scroll-2 .top .animation span:nth-child(5) {
+        display: none;
+
+    }
+    
+    #scroll-2 .top .animation span:nth-child(6) {
+        display: none;
+
+    }
+
+}
+
+@media (max-width:750px) {
+    #scroll-2 .top .number-about .about {
+        margin: 1em;
+        position: relative;
+        width: 50px;
+        font-family: 'News Cycle', sans-serif;
+        letter-spacing: 5px;
+    }
+    #scroll-2 .top .number-about .animation {
+        display: none;
+    }
+}
+
+@media (max-width:500px) {
+    #scroll-2 .box {
+        width: 75px;
+        height: 50px;
+        border: 2px solid transparent;
+        border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+        border-top: 12px solid ;
+        border-left: 12px solid ;
+        border-image-slice: 1;
+        padding: 25px;
+        position: relative;
+        overflow: hidden;
+        transition: all 2s ease-in-out linear;
+    }
+    
+    #scroll-2 .box img {
+        width: 100%;
+        height: 35px;
+    }
+    
+    #scroll-2 .top .number-about .number h3 {
+        margin-left: 2em;
+    }
+
+    #scroll-2 .top .number-about .about {
+        margin: 0em;
+        position: relative;
+        width: 0px;
+        font-family: 'News Cycle', sans-serif;
+        letter-spacing: 5px;
+    }
+    
+    
+}
+
+@media (max-width:500px) {
+    #scroll-2 {}
+}

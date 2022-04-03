@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Open+Sans&display=swap');
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;justify-content: center;
+    margin-left: auto;
+}
+.navbar ul li {
+    list-style: none;
+    margin: auto;
+    width: 80px;
+    height: 20px;
+    padding: 20px;
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+    display: flex;align-items: center;justify-content: center;
+
+}
+a { 
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(48, 230, 175);
+    font-family: 'News Cycle', sans-serif;
+    font-weight: 600;
+}
+
+.navbar ul li span::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(to left, lightgray,gainsboro,black);
+    background-size: 1000% 1000%;
+    transition: all 2s ease-in-out;
+}
+.navbar ul li span::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    right: 0px;
+    bottom: 10px;
+    background-image: linear-gradient(to left, lightgray,gainsboro,black);
+    background-size: 1000% 1000%;
+    transition: all 2s ease-in-out;
+}
+
+.navbar ul li span:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: -15%;
+    background-image: linear-gradient(to left, lightgray,gainsboro,black);
+    background-size: 400% 400%;
+    bottom: 14px;
+    transform: rotate(30deg);
+    transition: all 2s ease-in-out;
+
+
+}
+.navbar ul li span:nth-child(2)::after {
+    content: "";
+    transform: rotate(30deg);
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: -15%;
+    bottom: 24px;
+    background: linear-gradient(to left, lightgray,gainsboro,black);
+    transition: all 2s ease-in-out;
+    background-size: 400% 400%;
+
+}
+
+.navbar ul li:hover span::after {
+    background-position: 100% 100%;
+
+}
+.navbar ul li:hover span::before {
+    background-position: 100% 100%;
+
+}
+
+.navbar ul li:hover span:nth-child(2):after {
+    background-position: 0% 100%;
+
+}
+.navbar ul li:hover span:nth-child(2):before {
+    background-position: 0% 100%;
+
+}
+
+
+@media (max-width:770px) {
+    .navbar {
+        display: none;
+    }
+}

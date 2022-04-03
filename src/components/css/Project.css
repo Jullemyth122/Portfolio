@@ -1,0 +1,206 @@
+#scroll-3 .title {
+    font-size: 18px;
+    font-family: 'News Cycle', sans-serif;
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+
+}
+#scroll-3 .title h2 {
+    margin: 2em;
+}
+
+#scroll-3 .title h2:nth-child(1) { 
+	display: grid;
+	height: 1vh;
+	place-items: center; 
+    z-index: 10;
+}
+
+#scroll-3 .title h2:nth-child(1):before {
+	animation: anim 30s infinite;
+	background: radial-gradient(circle at 0% 0%, rgb(48, 230, 175), black);
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 4vmin rgb(48, 230, 175) inset, 0 1vmin 4vmin black inset,
+		0 -2vmin 7vmin black inset;
+	content: "";
+    position: absolute;
+	filter: drop-shadow(0 0 3vmin black) drop-shadow(0 5vmin 4vmin rgb(48,230,175))
+		drop-shadow(2vmin -2vmin 15vmin black)
+		drop-shadow(0 0 7vmin rgb(48,230,175));
+	height: 100px;
+	width: 100px;
+    z-index: -1;
+}
+
+@keyframes anim {
+	0%,
+	100% {
+		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+		box-shadow: 0 -2vmin 4vmin rgb(48, 230, 175) inset, 0 -4vmin 4vmin black inset,
+			0 -2vmin 7vmin black inset;
+	}
+
+	10% {
+		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+	}
+
+	20% {
+		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+	}
+
+	30% {
+		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+		box-shadow: 0 -4vmin 8vmin rgb(48, 230, 175) inset, -1vmin -2vmin 6vmin rgb(48, 230, 175) inset,
+			-1vmin -2vmin 4vmin black inset, 1vmin 4vmin 8vmin black inset;
+	}
+
+	40% {
+		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+	}
+
+	50% {
+		border-radius: 100%;
+		box-shadow: 0 4vmin 16vmin rgb(48, 230, 175) inset, 0 2vmin 5vmin rgb(48, 230, 175) inset, 0 4vmin 4vmin black inset,
+			0 6vmin 8vmin black inset;
+	}
+
+	60% {
+		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+	}
+
+	70% {
+		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+		box-shadow: 1vmin 1vmin 8vmin rgb(48, 230, 175) inset,
+			2vmin -1vmin 4vmin black inset, -1vmin -1vmin 16vmin black inset;
+	}
+
+	80% {
+		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+	}
+
+	90% {
+		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+	}
+}
+
+
+#scroll-3 .block-items {
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px 20px;
+    height: 90%;
+    overflow: auto;
+    letter-spacing: 5px;
+
+    
+}
+#scroll-3 .block-items .box {
+    width: 250px;
+    height: 250px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+    border-top: 12px solid;
+    border-left: 12px solid;
+    border-image-slice: 1;
+    position: relative;
+    
+}
+
+#scroll-3 .block-items .box img {
+    width: 100%;
+    height: 100%;
+}
+#scroll-3 .block-items .box .link {
+    color: rgb(12, 211, 12);
+    width: auto;
+    height: auto;
+    transition: 2s all ease-in-out ;
+
+}
+#scroll-3 .block-items .box .link a {
+    font-size: 25px;
+}
+
+@media (max-width:900px) {
+
+	#scroll-3 .title {
+		font-size: 15px;
+		font-family: 'News Cycle', sans-serif;
+		letter-spacing: 5px;
+		display: flex;
+		align-items: center;
+	
+	}
+
+	#scroll-3 .title h2 {
+		margin: 1em;
+	}
+
+	#scroll-3 .block-items {
+    
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 20px 20px;
+		height: 85%;
+		overflow: auto;
+		letter-spacing: 5px;
+		
+	}
+	#scroll-3 .block-items .box {
+		width: 200px;
+		height: 200px;
+		border: 5px solid transparent;
+		border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+		border-top: 12px solid;
+		border-left: 12px solid;
+		border-image-slice: 1;
+		position: relative;
+		
+	}
+	
+	#scroll-3 .block-items .box img {
+		width: 100%;
+		height: 100%;
+	}
+	#scroll-3 .block-items .box .link {
+		color: rgb(12, 211, 12);
+		width: auto;
+		height: auto;
+		transition: 2s all ease-in-out ;
+	
+	}
+	#scroll-3 .block-items .box .link a {
+		font-size: 25px;
+	}
+	
+	
+}
+
+@media (max-width:450px) {
+	#scroll-3 .block-items {
+    
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 20px 20px;
+		height: 85%;
+		overflow: auto;
+		letter-spacing: 5px;
+		
+	}
+	#scroll-3 .block-items .box {
+		width: 100px;
+		height: 100px;
+		border: 5px solid transparent;
+		border-image: linear-gradient(45deg, rgb(48, 230, 175),black);
+		border-top: 12px solid;
+		border-left: 12px solid;
+		border-image-slice: 1;
+		position: relative;
+		
+	}
+	#scroll-3 .block-items .box .link a {
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,684 @@
+:root {
+    color: rgb(48, 230, 175);
+}
+
+#scroll-1 .top {
+    display: flex;
+    color: rgb(48, 230, 175);
+}
+
+#scroll-1 .top .views {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+#scroll-1 .top .views h4,#scroll-1 .top .views ion-icon {
+    margin: 1em;
+    color: rgb(48, 230, 175);
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 87%;
+    left: 3%;
+    background-image: linear-gradient(to left, lightgray,gainsboro,black);
+    background-size: 400% 400%;
+}
+.section::after {
+    content: "";
+    position: absolute;
+    width: 87%;
+    height: 5px;
+    background-image: linear-gradient(to left, lightgray,gainsboro,black);
+    background-size: 400% 400%;
+    top: 5%;
+}
+
+.section #scroll-1 .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.home-welcome {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.home-welcome .number-title,.home-welcome .welcome-user {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em;
+
+}
+
+.home-welcome .number-title .number,.home-welcome .number-title .home {
+    margin: 1em;
+    position: relative;
+}
+
+.home-welcome .number-title .number {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-welcome .number-title .number h3 {
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    color: rgb(48, 230, 175);
+}
+
+@keyframes rot {
+    0%
+   {
+     transform:rotate(0deg)
+   }
+    25%
+   {
+     transform:rotate(90deg)
+   }
+   50%
+   {
+     transform:rotate(180deg)
+   }
+    75%
+   {
+     transform:rotate(270deg)
+   }
+   100% {
+     transform:rotate(360deg)
+   }
+ }
+
+/* .home-welcome .number-title .half-circle {
+  background-image:linear-gradient(red,green);
+  padding:1px;
+  width:100px;
+  height:100px;
+  border-style: solid;
+  border-color:transparent;
+   border-radius: 50%;
+  border-width:1px;
+ animation:rot 1s linear infinite; 
+  padding:1px;
+}
+.half-circle > div {
+  background:gray;
+  width:99px;
+  height:99px;
+  border-style: solid;
+  border-color:transparent;
+   border-radius: 50%;
+  border-width:1px;
+} */
+.home-welcome .number-title .half-circle {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+}
+
+.home-welcome .number-title .half-circle::before {
+    content: "";
+    position: absolute;
+    width: 125px;
+	height: 125px;
+	margin: 0px auto 0;
+	border:solid 5px darkgray;
+	border-radius: 50%;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+    transition: all 0.5s ease-in;
+    animation-name:             rotate2; 
+    animation-duration:         1.0s; 
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse; 
+    
+}
+
+.home-welcome .number-title .number::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+	height: 100px;
+	margin: 0px auto 0;
+	border:solid 5px gainsboro;
+	border-radius: 50%;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+    transition: all 0.5s ease-in;
+    animation-name:             rotate; 
+    animation-duration:         1.0s; 
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear; 
+}
+.home-welcome .number-title .number::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+	height: 75px;
+	margin: 0px auto 0;
+	border:solid 5px lightgray;
+	border-radius: 50%;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+    transition: all 0.5s ease-in;
+
+    animation-name:             rotate2; 
+    animation-duration:         1.0s; 
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear; 
+    animation-direction: reverse;
+}
+
+@keyframes rotate {
+    100% {
+        
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate2 {
+    100% {
+        
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.home-welcome .number-title .home {
+    width: 150px;
+    font-size: 35px;
+    font-family: 'News Cycle', sans-serif;
+    letter-spacing: 5px;
+}   
+
+.home-welcome .number-title .home::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+    animation: move 2s ease-in-out infinite;
+
+}
+.home-welcome .number-title .home::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 0px;
+    bottom: -10px;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+    animation: move 2s ease-in-out infinite;
+
+}
+
+.home-welcome .number-title .home span::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    right: -15%;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+    bottom: 14px;
+    transform: rotate(-30deg);
+    animation: move 2s ease-in-out infinite;
+
+}
+.home-welcome .number-title .home span::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    right: -15%;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+    bottom: 4px;
+    transform: rotate(-30deg);
+    animation: move 2s ease-in-out infinite;
+
+}
+
+.home-welcome .number-title .home span:nth-child(2):before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    left: -5px;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+    bottom: 14px;
+    transform: rotate(-30deg);
+    animation: move2 2s ease-in-out infinite;
+
+}
+.home-welcome .number-title .home span:nth-child(2):after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    left: -5px;
+    background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+    background-size: 400% 400%;
+    bottom: 4px;
+    transform: rotate(-30deg);
+    animation: move2 2s ease-in-out infinite;
+
+}
+
+@keyframes move {
+    100% {
+        background-position: -100% 100%;
+    }
+}
+
+@keyframes move2 {
+    100% {
+        background-position: 100% 100%;
+    } 
+}
+
+.home-welcome .welcome-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-welcome .welcome-user {
+    margin-top: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px 10px;
+    position: relative;
+    font-size: 35px;
+    font-family: 'News Cycle', sans-serif;
+    letter-spacing: 5px;
+
+}
+
+.home-welcome .welcome-user b::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 0;
+    height: 100%;
+    background: rgb(48, 230, 175);
+}
+
+.home-welcome .welcome-user b::after {
+    content: "";
+    margin-left: 5px;
+    position: absolute;
+    width: 2px;
+    top: 0;
+
+    height: 100%;
+    background: rgb(48, 230, 175);
+}
+
+
+.wave-animation {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.wave-animation div {
+    width: calc(200px - 10%) ;
+    height: calc(200px - 10%);
+}
+
+
+.section #scroll-1 .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+
+}
+
+.section #scroll-1 .bottom .likes-dislike {
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section #scroll-1 .bottom .like,.section #scroll-1 .bottom .dislike {
+    font-size: 25px;
+    margin: 0 50px 0 50px;
+    font-family: 'News Cycle', sans-serif;
+
+}
+
+@media (max-width:1300px) {
+
+    #scroll-1 .top {
+        display: flex;
+        color: rgb(48, 230, 175);
+    }
+    
+    #scroll-1 .top .views {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-family: 'News Cycle', sans-serif;
+    }
+    
+    #scroll-1 .top .views h4,#scroll-1 .top .views ion-icon {
+        margin: 1em;
+        color: rgb(48, 230, 175);
+    }
+    
+    .home-welcome {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .home-welcome .number-title,.home-welcome .welcome-user {
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3em;
+    
+    }
+    
+    .home-welcome .number-title .number,.home-welcome .number-title .home {
+        margin: 1em;
+        position: relative;
+    }
+    
+    .home-welcome .number-title .number {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .home-welcome .number-title .number h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 2;
+        color: rgb(48, 230, 175);
+    }
+    
+    .home-welcome .number-title .home {
+        width: 150px;
+        font-size: calc(35px - 1vw);
+        font-family: 'News Cycle', sans-serif;
+        letter-spacing: 5px;
+    }   
+    
+    .home-welcome .number-title .home::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        left: 0px;
+        bottom: 0px;
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+        animation: move 2s ease-in-out infinite;
+    
+    }
+    .home-welcome .number-title .home::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        left: 0px;
+        bottom: -10px;
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+        animation: move 2s ease-in-out infinite;
+    
+    }
+    
+    .home-welcome .number-title .home span::before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        right: -15%;
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+        bottom: 14px;
+        transform: rotate(-30deg);
+        animation: move 2s ease-in-out infinite;
+    
+    }
+    .home-welcome .number-title .home span::after {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        right: -15%;
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+        bottom: 4px;
+        transform: rotate(-30deg);
+        animation: move 2s ease-in-out infinite;
+    
+    }
+    
+    .home-welcome .number-title .home span:nth-child(2):before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        left: -5px;
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+        bottom: 14px;
+        transform: rotate(-30deg);
+        animation: move2 2s ease-in-out infinite;
+    
+    }
+    .home-welcome .number-title .home span:nth-child(2):after {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        left: -5px;
+        background-image: linear-gradient(to left, black,rgb(15, 59, 46),rgb(33, 248, 212));
+        background-size: 400% 400%;
+        bottom: 4px;
+        transform: rotate(-30deg);
+        animation: move2 2s ease-in-out infinite;
+    
+    }
+
+    .home-welcome .welcome-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .home-welcome .welcome-user {
+
+        margin-top: auto;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px 10px;
+        position: relative;
+        font-size: calc(35px - 1vw);
+        font-family: 'News Cycle', sans-serif;
+        letter-spacing: 5px;
+    
+    }
+    
+    .home-welcome .welcome-user b::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        top: 0;
+        height: 100%;
+        background: rgb(48, 230, 175);
+    }
+    
+    .home-welcome .welcome-user b::after {
+        content: "";
+        margin-left: 5px;
+        position: absolute;
+        width: 2px;
+        top: 0;
+    
+        height: 100%;
+        background: rgb(48, 230, 175);
+    }
+    
+    
+    .wave-animation {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .wave-animation div {
+        width: calc(200px - 10%) ;
+        height: calc(200px - 10%);
+    }
+    
+    
+    .section #scroll-1 .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    
+    }
+    
+    .section #scroll-1 .bottom .likes-dislike {
+        margin-top: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .section #scroll-1 .bottom .like,.section #scroll-1 .bottom .dislike {
+        font-size: calc(30px - 1vw);
+        margin: 0 50px 0 50px;
+        font-family: 'News Cycle', sans-serif;
+    
+    }
+
+    .section::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: calc(87% - 10vw);
+        left: 3%;
+        background-image: linear-gradient(to left, lightgray,gainsboro,black);
+        background-size: 400% 400%;
+    }
+    .section::after {
+        content: "";
+        position: absolute;
+        width: calc(87% - 10vw);
+        height: 5px;
+        background-image: linear-gradient(to left, lightgray,gainsboro,black);
+        background-size: 400% 400%;
+        top: 5%;
+    }
+    
+    
+}
+
+@media (max-width:1000px) {
+    .section #scroll-1 .body {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width:600px) {
+
+    .home-welcome .number-title .home {
+        width: 150px;
+        font-size: calc(20px - 1vw);
+        font-family: 'News Cycle', sans-serif;
+        letter-spacing: 5px;
+    }   
+
+    .home-welcome .welcome-user {
+        grid-gap: 10px 10px;
+        position: relative;
+        font-size: calc(20px - 1vw);
+    
+    }
+    .section #scroll-1 .bottom .like,.section #scroll-1 .bottom .dislike {
+        font-size: 16px;
+        margin: 0 50px 0 50px;
+        font-family: 'News Cycle', sans-serif;
+    
+    }
+
+    .section #scroll-1 .bottom {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    
+    }
+    
+    .section #scroll-1 .bottom .likes-dislike {
+        margin-top: 0;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section::after {
+        z-index: -1;
+    }
+    .section::before {
+        z-index: -1;
+    }
+
+
+}
+
+@media (max-width:500px) {
+    #scroll-1 {}
+}
