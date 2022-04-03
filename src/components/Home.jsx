@@ -7,7 +7,7 @@ function Home({ username,views }) {
 
     const [items,setitems] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:9999/likes')
+        axios.get('https://portfolio-backend-xenex.herokuapp.com/likes')
             .then(data => setitems(data.data[0]))
             .catch(err => console.log(err))
 
@@ -24,7 +24,7 @@ function Home({ username,views }) {
             }
         })
 
-        axios.post('http://localhost:9999/likes/add/likes',{ likes:  items.likes})
+        axios.post('https://portfolio-backend-xenex.herokuapp.com/likes/add/likes',{ likes:  items.likes})
             .then(res => {})
             .catch(err => console.log(err))
     }
@@ -42,7 +42,7 @@ function Home({ username,views }) {
         })
 
 
-        axios.post('http://localhost:9999/likes/add/dislikes',{ dislikes:items.dislikes})
+        axios.post('https://portfolio-backend-xenex.herokuapp.com/likes/add/dislikes',{ dislikes:items.dislikes})
     }
 
 

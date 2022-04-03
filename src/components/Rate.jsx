@@ -7,7 +7,7 @@ function Rate() {
 
     useEffect(() => {
         
-        axios.get('http://localhost:9999/rates')
+        axios.get('https://portfolio-backend-xenex.herokuapp.com/rates')
             .then(data => setcommentlist(data.data))
             .catch(err => console.log(err))
 
@@ -24,7 +24,7 @@ function Rate() {
         console.log(range)
         setcommentlist(prevState => [...prevState,{comment:comment,rate:range}])
 
-        axios.post('http://localhost:9999/rates/add',{comment:comment,rate:range})
+        axios.post('https://portfolio-backend-xenex.herokuapp.com/rates/add',{comment:comment,rate:range})
             .then(message => console.log(message))
             .catch(err => console.log(err))
 

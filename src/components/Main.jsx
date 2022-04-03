@@ -51,12 +51,12 @@ function Main() {
     const getData = async () => {
         const res = axios.get('https://ipgeolocation.abstractapi.com/v1/?api_key=ed75d92bb679494d9d911613daf2f0e9')
             .then(response => {
-                axios.get('http://localhost:9999/view/')
+                axios.get('https://portfolio-backend-xenex.herokuapp.com/view/')
                     .then(data => {
                         if (data.data[0].ip_address.includes(response.data.ip_address) == false) {
                             data.data[0].view_count += 1
                             setView(data.data[0].view_count)
-                            axios.post('http://localhost:9999/view/get/ip/address',{ip_address:[response.data.ip_address],view_count:data.data[0].view_count})
+                            axios.post('https://portfolio-backend-xenex.herokuapp.com/view/get/ip/address',{ip_address:[response.data.ip_address],view_count:data.data[0].view_count})
                                 .then(response => {
                                 console.log(response.data);
                                 })
@@ -75,7 +75,7 @@ function Main() {
     
 
     useEffect(() => {
-        axios.get('http://localhost:9999/view')
+        axios.get('https://portfolio-backend-xenex.herokuapp.com/view')
             .then(data => setView(data.data[0].view_count))
             .catch(err => console.log(err))
         getData()  
